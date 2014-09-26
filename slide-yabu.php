@@ -4,7 +4,7 @@
         <a data-info="yabu">Yabu no Naka</a>
     </div>
     
-    <div class="slide-wrapper">
+    <div class="slide-wrapper" id="container-yabu">
         
         <!-- Start #info-yabu -->
         
@@ -39,8 +39,8 @@
         
         <div class="logo">
             <div id="yabu-logo"></div>
-            <div class="bamboo md-trigger">
-                <div class="trigger" data-modal="modal-yabu"></div> 
+            <div class="bamboo md-trigger" data-modal="yabu">
+                <div class="trigger" data-modal="yabu"></div> 
             </div>
         </div>
         

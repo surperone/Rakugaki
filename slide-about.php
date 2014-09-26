@@ -2,7 +2,7 @@
     <div class="info-trigger show-info">
         <a data-info="about">About Me</a>
     </div>
-    <div class="slide-wrapper">
+    <div class="slide-wrapper" id="container-resume">
         
         <!-- Start #info-about -->
         
@@ -48,11 +48,27 @@
                     <a href="http://weibo.com/otakism" class="sina-weibo" target="_blank"><span class="icon-sina-weibo"></span></a>
                     <a href="https://github.com/artchen" class="github" target="_blank"><span class="icon-github"></span></a>
                 </div>
-                <div class="namecard-rear"></div>
+                <a class="view-resume md-trigger" data-modal="resume">View Résumé</a>
+                <a class="view-resume-small" href="art.chen_resume.pdf" target="_blank">View Résumé</a>
             </div>
         </div> 
         
         <!-- End .logo -->
+        
+        <div class="md-modal md-effect-12" id="modal-resume">
+            <div class="md-content">
+                <button class="md-close">
+                    <span class="icon-close"></span>
+                </button>
+                <div class="md-wrapper">
+                    <div class="resume-wrapper">
+                        <div class="resume-paper">
+                            <?php include 'resume.php' ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
          
     </div>
     

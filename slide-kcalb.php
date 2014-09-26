@@ -2,7 +2,7 @@
     <div class="info-trigger show-info">
         <a data-info="kcalb">Kcalb</a>
     </div>
-    <div class="slide-wrapper">
+    <div class="slide-wrapper" id="container-kcalb">
         
         <!-- Start #info-kcalb -->
         
@@ -35,7 +35,7 @@
         <!-- End #info-kcalb -->
         
         <div class="logo">
-            <div id="kcalb-logo" class="trigger md-trigger" data-modal="modal-kcalb"></div>
+            <div id="kcalb-logo" class="trigger md-trigger" data-modal="kcalb"></div>
         </div>
         
         <?php 

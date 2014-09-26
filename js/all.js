@@ -412,10 +412,11 @@ jQuery(document).ready(function ($) {
     $(".md-trigger").on(defaultEvent, function(event){
         console.log("MODAL TRIGGER TAPPED");
         event.preventDefault();
+        var modal_selector = "#container-" + $(this).attr('data-modal');
         $(".slide-nav").fadeOut();
         $(".info-trigger").fadeOut();
         disableSwipe();
-        $(this).parent().parent(".slide-wrapper").addClass("slide-wrapper-showdetail");
+        $(modal_selector).addClass("slide-wrapper-showdetail");
     });
     
     $(document).keydown(function(event){
@@ -459,7 +460,10 @@ jQuery(document).ready(function ($) {
     $(".slide-index, .slide-nav").on(defaultEvent, function(event){
         event.stopPropagation();   
     });
-    
+    $(".progress").each(function(){
+        var percent = parseInt($(this).attr("data-percent"));
+        $(this).css('width', percent + '%');
+    });
     
     $(".md-close").on(defaultEvent, function(event){
         console.log("CLOSE MODAL");
@@ -492,6 +496,10 @@ jQuery(document).ready(function ($) {
         }
         else if ($.address.value() === "/springtide"){
             $.address.title("Rakugaki / Springtide");
+            $("#springtide .logo #springtide-logo").addClass("tada");
+            setTimeout(function(){
+                $("#springtide .logo #springtide-logo").removeClass("tada");
+            }, 1000);
         }
         else if ($.address.value() === "/shiro"){
             $.address.title("Rakugaki / Shiro");
@@ -521,6 +529,10 @@ jQuery(document).ready(function ($) {
         }
         else if ($.address.value() === "/springtide"){
             $.address.title("Rakugaki / Springtide");
+            $("#springtide .logo #springtide-logo").addClass("tada");
+            setTimeout(function(){
+                $("#springtide .logo #springtide-logo").removeClass("tada");
+            }, 1000);
         }
         else if ($.address.value() === "/shiro"){
             $.address.title("Rakugaki / Shiro");
@@ -559,13 +571,21 @@ jQuery(document).ready(function ($) {
         }
     );
     
+    $("#springtide-logo").hover(
+        function(){
+            $(this).addClass("tada");
+        }, function(){
+            $(this).removeClass("tada");
+        }
+    );
+    
     /* adjust buttons alignment */
     
     $(".md-get-theme").each(function(){
         $(this).css("width", $(this).children('a').length * 140);
     });    
     
-    $('.slide-index, .works-info-content-wrapper').perfectScrollbar();
+    $('.slide-index, .works-info-content-wrapper, .resume-wrapper').perfectScrollbar();
     
     $('.show-info a').on(defaultEvent, function(event){
         event.preventDefault();

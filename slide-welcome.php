@@ -2,7 +2,7 @@
     <div class="info-trigger show-info">
         <a data-info="welcome">Welcome</a>
     </div>
-    <div class="slide-wrapper">
+    <div class="slide-wrapper" id="container-welcome">
         
         <!-- Start #info-welcome -->
         

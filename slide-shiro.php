@@ -2,7 +2,7 @@
     <div class="info-trigger show-info">
         <a data-info="shiro">Shiro</a>
     </div>
-    <div class="slide-wrapper">
+    <div class="slide-wrapper" id="container-shiro">
         
         <!-- Start #info-shiro -->
         

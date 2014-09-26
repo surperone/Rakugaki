@@ -8,6 +8,7 @@
     <title>Rakugaki</title>
     <meta name="description" content="Art Chen's portfolio" />
     <meta name="keywords" content="rakugaki,web,javascript,html,css,jquery,php,development,design,theme,wordpress,ghost,freelancer" />
+    <meta name="p:domain_verify" content="9d3af26297bf22df0f8336b57097f213"/>
     <link rel="icon" type="image/ico" href="./favicon.ico" />
     <script type="text/javascript" src="//use.typekit.net/onh5nft.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -20,7 +21,7 @@
     <script src="./js/jquery.address.min.js" type="text/javascript"></script>
     <script src="./js/jquery.mobile.custom.min.js" type="text/javascript"></script>
     <script src="./js/perfect-scrollbar.js" type="text/javascript"></script>
-    <script src="./js/all.js" type="text/javascript"></script>
+    <script src="./js/min/all-min.js" type="text/javascript"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -73,7 +74,7 @@
                     <div class="slide-index">
                         <ul>
                             <li><a class="special-anchor home-button">Welcome</a></li>
-                            <!--<li><a data-slide="springtide" class="special-anchor-direct">Springtide</a></li>-->
+                            <li><a data-slide="springtide" class="special-anchor-direct">Springtide</a></li>
                             <li><a data-slide="shiro" class="special-anchor-direct">Shiro</a></li>
                             <li><a data-slide="kcalb" class="special-anchor-direct">Kcalb</a></li>
                             <li><a data-slide="yabu-no-naka" class="special-anchor-direct">Yabu no Naka</a></li>
@@ -89,7 +90,7 @@
                             <?php include 'slide-welcome.php'; ?>
                             
                             <!-- Springtide -->
-                            <?php //include 'slide-springtide.php'; ?>
+                            <?php include 'slide-springtide.php'; ?>
                             
                             <!-- Shiro -->
                             <?php include 'slide-shiro.php'; ?>

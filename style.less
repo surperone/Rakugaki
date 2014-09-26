@@ -652,7 +652,65 @@ a {
 /* === Springtide === */
 
 #springtide{
+    background:#47464F;
     
+    .springtide-logo{
+        position:absolute;
+        display: block;
+        width: 250px;
+        height: 100px;
+        top: 50%;
+        left: 50%;
+        margin-top:-50px;
+        margin-left: -125px;
+        -webkit-transition:all 0.3s;
+        transition:all 0.3s;
+        
+        #springtide-logo {
+            display: block;
+            height: 100%;
+            width: 100%;
+            background:url(images/springtide_logo_gold.svg) center no-repeat;
+            -webkit-background-size: 100%;
+            background-size: 100%;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+    }
+    .desc {
+        position: absolute;
+        display: block;
+        list-style: none;
+        font-size: 1.25em;
+        font-family:'adobe-garamond-pro', sans-serif;
+        font-weight: normal;
+        text-align: center;
+        color:#816b33;
+        letter-spacing: 1px;
+        width: 250px;
+        margin:0px auto;
+        text-transform: uppercase;
+        line-height: 100%;
+        span {
+            color:#dbae3a;
+        }
+    }
+    .desc_1 {
+        bottom:50%;
+        left:50%;
+        -webkit-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+        margin-bottom:45px;
+    }
+    .desc_2 {
+        top:50%;
+        left:50%;
+        -webkit-transform: translate(-50%, 0%);
+        transform: translate(-50%, 0%);
+        margin-top:50px;
+    }
 }
 
 /* === Shiro === */
@@ -748,17 +806,37 @@ a {
         z-index:11;
         text-shadow:0px 0px 1px rgba(0,0,0,0.2);
         
-        .namecard-rear{
-            position:absolute;
-            left:100px;
-            bottom:20px;
-            display:block;
-            background:url(images/rakugaki.png) no-repeat;
+        .view-resume-small{
+            display:none;
+            bottom:30px;
             height:40px;
+            left:100px;
+            line-height: 38px;
+        }
+        .view-resume {
+            display:block;
+            bottom:30px;
+            height:40px;
+            left:100px;
+            line-height: 38px;
+        }
+        .view-resume,
+        .view-resume-small {
+            position:absolute;
             width:100px;
+            background-color:rgba(0,0,0,0.2);
+            border:1px solid rgba(255,255,255,0.3);
+            color:rgba(255,255,255,0.7);
+            text-align: center;
+            font-size: 0.8125em;
+            -webkit-transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
             z-index: 12;
-            -webkit-background-size:100px 40px;
-            background-size:100px 40px;
+        }
+        .view-resume:hover{
+            color:rgba(255,255,255, 1);
+            border-color:rgba(255,255,255,0.6);
+            background-color:rgba(0,0,0,0.3);
         }
     }
     .namecard::before{
@@ -827,12 +905,230 @@ a {
     }
 }
 
+/* Resume */
+
+#modal-resume{
+    background:#3f3f3f;
+    .md-content{
+        background:url(images/carbon_fibre_v2.png) repeat;
+    }
+    .resume-wrapper {
+        position: relative;
+        width:940px;
+        height: 100%;
+        overflow: hidden;
+        margin:0px auto;
+        background:#fff;
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+    }
+    
+    .resume-paper {
+        display: block;
+        position:relative;
+        height: auto;
+        width: 100%;
+        padding: 40px 60px 50px 60px;
+        color:#222;
+        .resume-header {
+            position:relative;
+            width:100%;
+            padding-bottom:15px;
+            
+            .resume-name {
+                font-size: 4.5em;
+                line-height: 100%;
+                letter-spacing: -3px;
+                text-transform: uppercase;
+                font-family: "futura-pt", sans-serif;
+                margin-bottom:10px;
+                span {
+                    font-weight: 300;
+                }
+            }
+            .resume-desc {
+                font-weight: normal;
+                font-size: 1.25em;
+                padding-left: 3px;
+            }
+            .resume-contacts{
+                display: block;
+                position:absolute;
+                top:10px;
+                right:0;
+                th,
+                td {
+                    height: 30px;
+                }
+                th {
+                    text-align: right;
+                    text-transform: uppercase;
+                    padding-right: 10px;
+                    font-size: 1.125em;
+                }
+                td {
+                    color:#888;
+                    a {
+                        color:#888;
+                    }
+                    a:hover {
+                        color:#4DACF0;
+                    }
+                }
+                
+            }
+        } /* end header */
+        .resume-article {
+            position:relative;
+            width:100%;
+            padding-top:30px;
+            border-top:8px solid #222;
+            border-bottom:8px solid #222;
+            
+            .resume-section{
+                margin-bottom:20px;
+                .resume-title{
+                    text-transform: uppercase;
+                    padding-bottom:7px;
+                    padding-left:5px;
+                    border-bottom:2px solid #222;
+                    margin-bottom:15px;
+                    font-size: 1.5em;
+                    font-weight:normal;
+                }
+                .resume-timeline{
+                    border-spacing: 0;
+                    th {
+                        display: table-cell;
+                        position:relative;
+                        vertical-align: top;
+                        padding-top:5px;
+                        padding-right:20px;
+                        overflow: visible;
+                        text-align: right;
+                        width:150px;
+                        font-size: 1.125em;
+                        font-weight: normal;
+                        border-collapse: collapse;
+                        border-right: 2px solid #222;
+                    }
+                    th:before {
+                        display: block;
+                        position: absolute;
+                        content:"";
+                        width: 20px;
+                        height: 20px;
+                        top:9px;
+                        right:-11px;
+                        border:2px solid #222;
+                        border-radius: 50%;
+                        z-index:2;
+                    }
+                    th:after {
+                        display: block;
+                        position: absolute;
+                        content:"";
+                        width: 26px;
+                        height: 26px;
+                        top:6px;
+                        right:-13px;
+                        border-radius: 50%;
+                        background:#fff;
+                    }
+                    td{
+                        display: table-cell;
+                        border-collapse: collapse;
+                        padding:5px 0px 10px 20px;
+                        
+                        h4 {
+                            font-size: 1.25em;
+                            font-weight: normal;
+                            margin-bottom:5px;
+                            a {
+                                color:#0798C8;
+                            }
+                            a:hover {
+                                color:#A9C6D1;
+                            }
+                        }
+                        h5 {
+                            font-weight: normal;
+                            font-size: 0.875em;
+                            color:#0798C8;
+                            a {
+                                color:#0798C8;
+                            }
+                            a:hover {
+                                color:#A9C6D1;
+                            }
+                        }
+                        div {
+                            padding-top:8px;
+                            color:#888;
+                            font-size: 0.875em;
+                        }
+                    }
+                }
+            }
+            main.resume-col {
+                width:70%;
+                padding-right:10px;
+            }
+            aside.resume-col {
+                width:30%;
+                padding-left:10px;
+            }
+            .sidebar-table {
+                border-spacing: 0;
+                th {
+                    font-size: 0.8125em;
+                    padding-right:10px;
+                    vertical-align: top;
+                    padding-bottom: 8px;
+                    text-align: right;
+                }
+                td {
+                    font-size: 0.8125em;
+                    padding-bottom: 8px;
+                    color:#888;
+                    b {
+                        color:#222;
+                    }
+                }
+                .progress-bar{
+                    position:relative;
+                    width:150px;
+                    height:20px;
+                    background:transparent;
+                    overflow: hidden;
+                    .progress{
+                        display: block;
+                        position: relative;
+                        height: 100%;
+                        background:#A9C6D1;
+                        line-height: 20px;
+                        font-size:0.8125em;
+                        color:#fff;
+                        text-align: right;
+                        padding-right: 10px;
+                        -webkit-transition: background 0.3s;
+                        transition: background 0.3s;
+                    }
+                }
+                .progress-bar:hover{
+                    .progress{
+                        background:#C5E2EE;
+                    }
+                }
+            }
+        }
+    }
+}
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-    #about .namecard .namecard-rear{
-		background-image:url(images/rakugaki@2x.png);
-		-webkit-background-size:100px 40px;
-		background-size:100px 40px;
-	}
+    #modal-resume .md-content {
+        background-image:url(images/carbon_fibre_v2_@2X.png);
+        -webkit-background-size: 32px 36px;
+        background-size: 32px 36px;
+    }
 }
 
 
@@ -1175,6 +1471,70 @@ a {
 
 /* === Animation === */
 
+@-webkit-keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes tada {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  10%, 20% {
+    -webkit-transform: scale(0.9) rotate(-3deg);
+    -ms-transform: scale(0.9) rotate(-3deg);
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale(1.1) rotate(3deg);
+    -ms-transform: scale(1.1) rotate(3deg);
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%, 60%, 80% {
+    -webkit-transform: scale(1.1) rotate(-3deg);
+    -ms-transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  100% {
+    -webkit-transform: scale(1) rotate(0);
+    -ms-transform: scale(1) rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+.tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+
 @-webkit-keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -1324,6 +1684,21 @@ a {
 
 
 /* === Responsive === */
+
+@media only screen and (max-width: 1100px) {
+    #modal-resume .resume-wrapper {
+        width:100%;
+        min-width:820px;
+    }
+}
+@media only screen and (max-width: 940px) {
+    #about .namecard .view-resume-small{
+        display: block;
+    }
+    #about .namecard .view-resume{
+        display: none;
+    }
+}
 
 @media only screen and (max-height: 400px) {
     #welcome #site-logo {
@@ -1510,22 +1885,18 @@ a {
         font-weight: 300;
     }
     #about .namecard .namecard-social{
+        margin-top:15px;
         font-size: 1.125em;
     }
-    #about .namecard .namecard-rear{
-        margin-left:-15px;
-        bottom:15px;
-        width:80px;
-        height:32px;
-        -webkit-background-size: 80px 32px;
-        background-size: 80px 32px;
+    #about .namecard .view-resume-small{
+        display: block;
+        bottom:25px;
+        height:30px;
+        line-height: 28px;
+        left:75px;
     }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-        #about .namecard .namecard-rear{
-            background-image:url(images/rakugaki@2x.png);
-            -webkit-background-size: 80px 32px;
-            background-size: 80px 32px;
-        }
+    #about .namecard .view-resume{
+        display: none;
     }
     
     .slide-index{
@@ -1549,4 +1920,10 @@ a {
         }
     }
 
+    #springtide .desc_1 p:first-child {
+        display: none;
+    }
+    #springtide .desc_2 p:last-child {
+        display: none;
+    }
 }
