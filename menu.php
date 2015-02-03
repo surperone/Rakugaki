@@ -27,9 +27,9 @@
 
     </li>
     <li class="menu-site">
-        <a href="http://zaregoto.me" class="cf">
+        <a href="http://takechiyo.me" class="cf">
             <span class="menu-icon icon-pen"></span>
-            <span class="menu-text">Zaregoto.me</span>
+            <span class="menu-text">Takechiyo.me</span>
             <span class="lang-label">CN</span>
         </a>   
     </li>
