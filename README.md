@@ -1,4 +1,4 @@
 Rakugaki
 ========
 
-My protfolio
+Design portfolio of Art Chen.
